@@ -1,0 +1,27 @@
+# Unity generated
+Temp/
+Library/
+obj/
+Build/
+Builds/
+*.csproj
+*.unityproj
+*.sln
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+
+# Visual Studio
+*.suo
+*.user
+*.sln.docstates
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+Assets/Scenes/Main.unity.meta
+tt-minigame/

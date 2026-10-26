@@ -1,0 +1,75 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <list>
+          <option value="akshare" />
+          <option value="beautifulsoup4" />
+          <option value="certifi" />
+          <option value="decorator" />
+          <option value="distlib" />
+          <option value="filelock" />
+          <option value="greenlet" />
+          <option value="idna" />
+          <option value="llvmlite" />
+          <option value="lxml" />
+          <option value="markdown-it-py" />
+          <option value="numba" />
+          <option value="numpy" />
+          <option value="pandas" />
+          <option value="platformdirs" />
+          <option value="psycopg2-binary" />
+          <option value="python-discovery" />
+          <option value="pytz" />
+          <option value="requests" />
+          <option value="rich" />
+          <option value="simplejson" />
+          <option value="soupsieve" />
+          <option value="SQLAlchemy" />
+          <option value="tqdm" />
+          <option value="tzdata" />
+          <option value="urllib3" />
+          <option value="virtualenv" />
+          <option value="scipy" />
+          <option value="cryptography" />
+          <option value="pydantic-settings" />
+          <option value="pandera" />
+          <option value="typing-extensions" />
+          <option value="pandas-ta" />
+          <option value="ta-lib" />
+          <option value="cffi" />
+          <option value="charset-normalizer" />
+          <option value="colorama" />
+          <option value="curl-cffi" />
+          <option value="et-xmlfile" />
+          <option value="html5lib" />
+          <option value="jsonpath" />
+          <option value="mdurl" />
+          <option value="mini-racer" />
+          <option value="openpyxl" />
+          <option value="pycparser" />
+          <option value="Pygments" />
+          <option value="python-dateutil" />
+          <option value="six" />
+          <option value="tabulate" />
+          <option value="webencodings" />
+          <option value="websocket-client" />
+          <option value="xlrd" />
+          <option value="pydantic" />
+          <option value="loguru" />
+          <option value="chinesecalendar" />
+          <option value="scikit-learn" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="scipy" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

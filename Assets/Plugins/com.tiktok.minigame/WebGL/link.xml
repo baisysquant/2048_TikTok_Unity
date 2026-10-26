@@ -1,0 +1,30 @@
+<!--
+  link.xml - copied from TikTok-Unity-SDK_2026-06-09_044640_Callback-deserialization-fix.unitypackage
+  (com.tiktok.minigame 1.1.3). Preserves the whole runtime assembly `ttsdk` for
+  IL2CPP managed stripping.
+
+  WHY
+  TTSDK deserializes native callback payloads with LitJson, which constructs
+  the result/model types by reflection (Activator.CreateInstance). The CP's
+  mini-game build is IL2CPP + managed stripping. The UnityLinker sees no
+  direct `new` for these result types' parameterless constructors and strips
+  them, so on a real device Activator.CreateInstance throws:
+
+      System.MissingMethodException: Default constructor not found for type
+      TTSDK.TTGetEntranceMissionRewardResult
+
+  GeneralCallbackResult carries [Preserve], but [Preserve] does NOT inherit,
+  and its concrete result subclasses (TTGetEntranceMissionRewardResult,
+  TTCheckBalanceResult, TTGetLocationSuccessCallbackResult, TTScanCode/
+  ShowModal/ShowToast/ShowActionSheet*Result, TTGetShortcutMissionRewardResult)
+  are reflection-only - every one is a stripping candidate.
+
+  FIX
+  Preserve the whole runtime assembly `ttsdk` so the linker keeps all
+  constructors/members in the IL2CPP/WebGL build. Assembly-wide is
+  intentional: it also covers nested DTOs and result types added by future
+  SDK versions.
+-->
+<linker>
+  <assembly fullname="ttsdk" preserve="all"/>
+</linker>

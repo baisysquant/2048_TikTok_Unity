@@ -1,0 +1,25 @@
+{
+  "appid": "",
+  "projectname": "Unity-2048",
+  "compileType": "game",
+  "orientation": "portrait",
+  "setting": {
+    "urlCheck": false
+  },
+  "unity": {
+    "build": {
+      "webgl": "",
+      "native": {
+        "il2cpp": "",
+        "apk": "",
+        "fullApk": ""
+      },
+      "instantGame": ""
+    },
+    "publishType": "MiniGame",
+    "starkSdkVersion": "1.1.5-Release",
+    "unityToolsVersion": "1.1.5",
+    "unityEngineVersion": "6000.5.5f1",
+    "arch": ""
+  }
+}
