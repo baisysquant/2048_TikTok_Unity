@@ -943,9 +943,10 @@ public class ScoreDisplay : MonoBehaviour
             float size = Mathf.Max(84, board.CellSize * 0.82f);
             _pendingBtn = new GameObject("PendingBoost", typeof(Image), typeof(Button));
             _pendingRT = _pendingBtn.GetComponent<RectTransform>();
-            _pendingRT.SetParent(board.BoardContainer, false);
-            _pendingRT.anchorMin = new Vector2(0, 1);
-            _pendingRT.anchorMax = new Vector2(0, 1);
+            // 3D 版：按钮挂在 canvas 上，位置跟随 3D 格子的屏幕投影（GetCellPosition 返回 canvas 坐标）
+            _pendingRT.SetParent(_canvas.transform, false);
+            _pendingRT.anchorMin = new Vector2(0.5f, 0.5f);
+            _pendingRT.anchorMax = new Vector2(0.5f, 0.5f);
             _pendingRT.sizeDelta = new Vector2(size, size);
 
             _pendingBg = _pendingBtn.GetComponent<Image>();

@@ -88,9 +88,9 @@ public class GameManager : MonoBehaviour
             var camGO = new GameObject("MainCamera", typeof(Camera), typeof(AudioListener));
             camGO.tag = "MainCamera";
             var cam = camGO.GetComponent<Camera>();
-            cam.orthographic = true;
             cam.clearFlags = CameraClearFlags.SolidColor;
             cam.backgroundColor = new Color(0.96f, 0.94f, 0.90f);
+            // 透视参数由 BoardRenderer.SetupSceneAndCamera 统一配置（3D 棋盘场景）
         }
 
         var canvas = FindObjectOfType<Canvas>();
