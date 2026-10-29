@@ -171,6 +171,13 @@ public static class TikTokBridge
 
     public static bool IsInitialized => _isInitialized;
 
+    /// <summary>激励视频广告位是否已配置（未配置时各广告入口应降级提示，不进入 SDK 流程）</summary>
+    public static bool IsRewardedAdConfigured()
+    {
+        if (_rewardedAdUnitId == null) LoadAdConfig();   // 理论上 Initialize 已加载，双保险
+        return !string.IsNullOrEmpty(_rewardedAdUnitId);
+    }
+
     // ========== Required: Silent Login ==========
     public static void SilentLogin(System.Action<string> onComplete)
     {

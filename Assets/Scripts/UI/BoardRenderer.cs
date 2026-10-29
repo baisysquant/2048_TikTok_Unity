@@ -54,6 +54,20 @@ public class BoardRenderer : MonoBehaviour
         CreateCellBackgrounds();
     }
 
+    /// <summary>切换网格尺寸（4/5），重建格子背景并重算格子尺寸</summary>
+    public void SetGridSize(int gridSize)
+    {
+        if (gridSize < 3 || gridSize > 6) return;
+        _gridSize = gridSize;
+        // 棋盘外框尺寸不变，仅重算格子大小与间隙
+        float boardSize = _boardContainer != null ? _boardContainer.sizeDelta.x
+            : Mathf.Min(_canvas.GetComponent<RectTransform>().rect.width, _canvas.GetComponent<RectTransform>().rect.height) * 0.88f;
+        _boardPadding = boardSize * 0.04f;
+        _gap = boardSize * 0.02f;
+        _cellSize = (boardSize - _boardPadding * 2 - _gap * (_gridSize - 1)) / _gridSize;
+        CreateCellBackgrounds();
+    }
+
     private void CreateBoardBackground()
     {
         // Force canvas layout update, then calculate board size from canvas
@@ -120,6 +134,7 @@ public class BoardRenderer : MonoBehaviour
     }
 
     public float CellSize => _cellSize;
+    public int GridSize => _gridSize;
     public RectTransform BoardContainer => _boardContainer;
 
     public void ClearBoard()

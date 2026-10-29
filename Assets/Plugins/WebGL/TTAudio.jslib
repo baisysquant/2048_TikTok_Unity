@@ -45,6 +45,18 @@ mergeInto(LibraryManager.library, {
       if (!ctx) {
         ctx = tt.createInnerAudioContext();
         ctxs[name] = ctx;
+        // mp3 不存在（新增音效只有 wav）时回退到 wav，避免静音；仅回退一次防止死循环
+        ctx.__wavTried = false;
+        ctx.onError(function () {
+          if (ctx.__wavTried) return;
+          ctx.__wavTried = true;
+          try {
+            ctx.src = "StreamingAssets/audio/" + name + ".wav";
+            ctx.volume = globalThis.__TTWebAudioVolume === undefined ? 0.5 : globalThis.__TTWebAudioVolume;
+            ctx.stop();
+            ctx.play();
+          } catch (e) {}
+        });
       }
       ctx.src = "StreamingAssets/audio/" + name + ".mp3";
       ctx.volume = globalThis.__TTWebAudioVolume === undefined ? 0.5 : globalThis.__TTWebAudioVolume;

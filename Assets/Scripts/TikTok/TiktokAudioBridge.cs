@@ -41,6 +41,11 @@ public static class TiktokAudioBridge
     private static AudioClip _editorMerge;
     private static AudioClip _editorGameOver;
     private static AudioClip _editorWin;
+    private static AudioClip _editorSpecial;
+    private static AudioClip _editorBank;
+    private static AudioClip _editorReward;
+    private static AudioClip _editorUndo;
+    private static AudioClip _editorClick;
 
     public static bool IsTikTokRuntime
     {
@@ -95,6 +100,11 @@ public static class TiktokAudioBridge
         _editorMerge = Resources.Load<AudioClip>("Audio/merge");
         _editorGameOver = Resources.Load<AudioClip>("Audio/gameover");
         _editorWin = Resources.Load<AudioClip>("Audio/win");
+        _editorSpecial = Resources.Load<AudioClip>("Audio/special");
+        _editorBank = Resources.Load<AudioClip>("Audio/bank");
+        _editorReward = Resources.Load<AudioClip>("Audio/reward");
+        _editorUndo = Resources.Load<AudioClip>("Audio/undo");
+        _editorClick = Resources.Load<AudioClip>("Audio/click");
     }
 
     private static AudioClip GetEditorClip(string name)
@@ -106,6 +116,11 @@ public static class TiktokAudioBridge
             case "merge": return _editorMerge;
             case "gameover": return _editorGameOver;
             case "win": return _editorWin;
+            case "special": return _editorSpecial;
+            case "bank": return _editorBank;
+            case "reward": return _editorReward;
+            case "undo": return _editorUndo;
+            case "click": return _editorClick;
             default: return null;
         }
     }
