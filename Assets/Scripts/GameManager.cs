@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private float _tileAnimationDuration = 0.12f;
     [SerializeField] private float _spawnAnimationDuration = 0.2f;
-    [SerializeField] private Color _boardBackgroundColor = new Color(0.96f, 0.94f, 0.90f);
+    [SerializeField] private Color _boardBackgroundColor = new Color(0.985f, 0.97f, 0.94f);
     [SerializeField] private int _boardSize = 4;
 
     public Game2048 Game { get; private set; }
@@ -88,9 +88,9 @@ public class GameManager : MonoBehaviour
             var camGO = new GameObject("MainCamera", typeof(Camera), typeof(AudioListener));
             camGO.tag = "MainCamera";
             var cam = camGO.GetComponent<Camera>();
+            cam.orthographic = true;
             cam.clearFlags = CameraClearFlags.SolidColor;
-            cam.backgroundColor = new Color(0.96f, 0.94f, 0.90f);
-            // 透视参数由 BoardRenderer.SetupSceneAndCamera 统一配置（3D 棋盘场景）
+            cam.backgroundColor = new Color(0.985f, 0.97f, 0.94f);
         }
 
         var canvas = FindObjectOfType<Canvas>();
@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
         _boardRenderer.Initialize(canvas);
         _inputHandler.Initialize();
         _scoreDisplay.Initialize(canvas, _boardRenderer.BoardContainer);
-        _scoreDisplay.SetCallbacks(OnNewGameClicked, OnUndoClicked, OnPoolClicked, OnSpecialItemUse, OnDifficultySelected);
+        _scoreDisplay.SetCallbacks(OnUndoClicked, OnPoolClicked, OnSpecialItemUse, OnDifficultySelected, UndoFromGameOver);
         _scoreDisplay.BindPendingButton(OnPendingClicked);
 
         // 事件绑定
@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviour
         {
             Game.FlushBestScore();
             _audioManager?.PlayGameOver();
-            _scoreDisplay.ShowGameOver(Game.Score, OnRestartClicked, Game.CanRevive, OnReviveClicked);
+            _scoreDisplay.ShowGameOver(Game.Score, Game.BestScore, Game.MoveCount, OnRestartClicked, Game.CanRevive, OnReviveClicked);
             TikTokBridge.AddHomeScreenShortcut(success =>
             {
                 if (success) Debug.Log("[GameManager] Home shortcut added");
@@ -310,12 +310,13 @@ public class GameManager : MonoBehaviour
 
     private void OnSpecialItemUse(SpecialSystem.SpecialItem item)
     {
-        if (Special.TryUseItem(item))
-        {
-            // 需要看广告（非免费、非调测）时由 AdBusy 状态进入广告路由
-            if (Special.AdBusy)
-                PlaySpecialAd();
-        }
+        if (!Special.TryUseItem(item)) return;
+
+        // 无论免费直发还是走广告，都先关闭特技池弹窗，让用户回到棋盘
+        _scoreDisplay.CloseSpecialPanel();
+
+        if (Special.AdBusy)
+            PlaySpecialAd();   // 免费场景 AdBusy=false；只有需要看广告时才拉起广告，结束后继续游戏
     }
 
     private void TrackSpecial(string evt, string extra = "")
@@ -334,7 +335,7 @@ public class GameManager : MonoBehaviour
 
         if (!Game.CanUndo)
         {
-            ShowFloat("没有可回撤的操作");
+            ShowFloat("Nothing to undo");
             return;
         }
 
@@ -343,7 +344,7 @@ public class GameManager : MonoBehaviour
         {
             Game.ConsumeUndoFree();
             int remain = Game.UndoFreeLeft;
-            DoUndo(remain > 0 ? $"免费剩 {remain} 次" : "免费次数已用完");
+            DoUndo(remain > 0 ? $"FREE left: {remain}" : "Free uses used up");
             return;
         }
 
@@ -354,7 +355,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        ShowFloat("完整观看广告才能回撤");
+        ShowFloat("Watch an ad to undo");
         PlayUndoAd();
     }
 
@@ -362,26 +363,26 @@ public class GameManager : MonoBehaviour
     {
         if (!TikTokBridge.IsRewardedAdConfigured())
         {
-            ShowFloat("广告加载失败，无法回退");
+            ShowFloat("Ad failed to load");
             return;
         }
         TikTokBridge.ShowRewardedAd(rewarded =>
         {
             if (rewarded)
             {
-                ShowFloat("广告观看完成，给予回撤奖励");
+                ShowFloat("Undo unlocked!");
                 DoUndo();
             }
             else
             {
                 TrackSpecial("undo_ad_incomplete");
-                ShowFloat("完整观看广告才能回撤");
+                ShowFloat("Watch an ad to undo");
                 _scoreDisplay.UpdateUndoButton(Game.CanUndo, Game.UndoFreeLeft);
             }
         });
     }
 
-    private void DoUndo()
+    private void DoUndo(string message = null)
     {
         int steps = Game.Undo();
         if (steps <= 0) return;
@@ -391,7 +392,15 @@ public class GameManager : MonoBehaviour
         _boardRenderer.RefreshBoard(Game.Tiles, false);
         _scoreDisplay.UpdateScore(Game.Score, Game.BestScore, Game.MoveCount);
         _scoreDisplay.UpdateUndoButton(Game.CanUndo, Game.UndoFreeLeft);
-        ShowFloat($"↩ 已回撤 {steps} 步");
+        ShowFloat(message ?? $"Undo {steps} step(s)");
+    }
+
+    // ========== 失败弹窗悔棋救场 ==========
+
+    /// <summary>游戏结束弹窗内点 UNDO：直接回撤上一局面并关闭弹窗让玩家继续玩（不走广告流程）</summary>
+    public void UndoFromGameOver()
+    {
+        DoUndo();
     }
 
     // ========== 特技广告路由 ==========
@@ -400,7 +409,7 @@ public class GameManager : MonoBehaviour
     {
         if (!TikTokBridge.IsRewardedAdConfigured())
         {
-            Special.FailAd("广告暂不可用，请稍后重试");
+            Special.FailAd("Ad unavailable, try again later");
             return;
         }
         Special.ArmAdWatchdog();
@@ -417,13 +426,13 @@ public class GameManager : MonoBehaviour
         if (DebugSkipAd)
         {
             TrackSpecial("debug_skip_ad", "scene=revive");
-            ShowFloat("调测模式：跳过广告");
+            ShowFloat("Debug: ad skipped");
             DoRevive();
             return;
         }
         if (!TikTokBridge.IsRewardedAdConfigured())
         {
-            ShowFloat("广告暂不可用");
+            ShowFloat("Ad unavailable");
             return;
         }
         TikTokBridge.ShowRewardedAd(rewarded =>
@@ -431,7 +440,7 @@ public class GameManager : MonoBehaviour
             if (!rewarded) return;
             DoRevive();
         },
-        () => ShowFloat("广告暂不可用，请稍后重试"));
+        () => ShowFloat("Ad unavailable, try again later"));
     }
 
     private void DoRevive()
@@ -455,12 +464,6 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnRestartClicked()
-    {
-        _scoreDisplay.HideOverlays();
-        StartSameSizeGame();
-    }
-
-    private void OnNewGameClicked()
     {
         _scoreDisplay.HideOverlays();
         StartSameSizeGame();

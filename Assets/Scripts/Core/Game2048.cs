@@ -92,8 +92,6 @@ public class Game2048
         OnScoreChanged?.Invoke(Score);
         OnGameOverChanged?.Invoke(false);
         OnWonChanged?.Invoke(false);
-
-        return k;
     }
 
     public bool Move(MoveDirection direction)
@@ -545,7 +543,5 @@ public class Game2048
         OnScoreChanged?.Invoke(Score);
         OnGameOverChanged?.Invoke(false);
         OnWonChanged?.Invoke(false);
-
-        return k;
     }
 }

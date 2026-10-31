@@ -193,7 +193,7 @@ public class SpecialSystem
         SavePool();
         OnPoolChanged?.Invoke();
         if (fromClick)
-            OnFloatText?.Invoke("⚡ 特技已入池");
+            OnFloatText?.Invoke("Boost banked!");
         return true;
     }
 
@@ -209,7 +209,7 @@ public class SpecialSystem
     private void GrantOverflowReward()
     {
         _game.AddScore(SpecialReward);
-        OnFloatText?.Invoke("⚡ 特技池已满，已自动兑现 +2048");
+        OnFloatText?.Invoke("Pool full - auto-cashed +2048!");
         Track("bank_overflow_direct_reward", "score=" + _game.Score);
     }
 
@@ -219,7 +219,7 @@ public class SpecialSystem
         // 广告播放看门狗：SDK 长时间不回调时释放锁
         if (_adBusy && _adWatchdogUntil > 0 && Time.unscaledTime >= _adWatchdogUntil)
         {
-            FailAd("广告未完成，奖励未发放");
+            FailAd("Ad not finished. No reward.");
             return;
         }
 
@@ -265,7 +265,7 @@ public class SpecialSystem
         if (DebugSkipAd)
         {
             Track("debug_skip_ad", "scene=special");
-            OnFloatText?.Invoke("调测模式：跳过广告");
+            OnFloatText?.Invoke("Debug: ad skipped");
             GrantReward(item.id, false);
             return true;
         }
@@ -282,7 +282,7 @@ public class SpecialSystem
         // 广告位未配置直接降级提示
         if (!AdConfigAvailable)
         {
-            OnFloatText?.Invoke("广告暂不可用，请稍后重试");
+            OnFloatText?.Invoke("Ad unavailable, try again later");
             _cooldownUntil = Time.unscaledTime + SpecialAdCooldown;
             return true;
         }
@@ -306,7 +306,7 @@ public class SpecialSystem
         if (!watched)
         {
             Track("ad_incomplete");
-            OnFloatText?.Invoke("完整观看广告才能领取奖励");   // 条目保留、库存不变，可再次点击
+            OnFloatText?.Invoke("Watch ad fully to claim");   // 条目保留、库存不变，可再次点击
             return;
         }
         Track("ad_complete");
@@ -344,6 +344,6 @@ public class SpecialSystem
         _game.AddScore(SpecialReward);
         OnRewardGranted?.Invoke(SpecialReward);
         Track("reward", "score=" + _game.Score + " remain=" + _pool.Count + " free=" + isFree);
-        OnFloatText?.Invoke(isFree ? "🎁 +2048 首次特技免费！" : "🚀 +2048 特技加速！");
+        OnFloatText?.Invoke(isFree ? "+2048 free boost!" : "+2048 boost!");
     }
 }

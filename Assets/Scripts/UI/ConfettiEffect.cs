@@ -13,14 +13,14 @@ public class ConfettiEffect : MonoBehaviour
     private List<RectTransform> _pool;
 
     private static readonly Color[] Colors = {
-        new Color(0.93f, 0.89f, 0.85f),
-        new Color(0.95f, 0.69f, 0.47f),
-        new Color(0.96f, 0.58f, 0.39f),
-        new Color(0.96f, 0.37f, 0.23f),
-        new Color(0.93f, 0.81f, 0.45f),
-        new Color(0.93f, 0.76f, 0.14f),
-        new Color(1f, 0.47f, 0.78f),
-        new Color(0.47f, 0.78f, 1f),
+        new Color(0.941f, 0.569f, 0.686f), // 粉红
+        new Color(0.980f, 0.804f, 0.431f), // 金黄
+        new Color(0.510f, 0.765f, 0.922f), // 天蓝
+        new Color(0.745f, 0.627f, 0.863f), // 淡紫
+        new Color(0.941f, 0.569f, 0.686f),
+        new Color(0.980f, 0.804f, 0.431f),
+        new Color(0.510f, 0.765f, 0.922f),
+        new Color(0.745f, 0.627f, 0.863f),
     };
 
     public void Initialize(Canvas canvas)
