@@ -32940,3 +32940,334 @@ Asset Pipeline Refresh (id=5ba9fd726531d9d4fad95e1e93043b91): Total: 0.007 secon
 [Licensing::Client] Successfully resolved entitlement details
 Scanning for USB devices : 2.659ms
 Scanning for USB devices : 1.988ms
+Scanning for USB devices : 2.186ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated access token: "eDtpSFUT"... (expires: 2026-10-31T04:56:37Z)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Scanning for USB devices : 2.003ms
+Scanning for USB devices : 1.400ms
+Scanning for USB devices : 3.517ms
+Scanning for USB devices : 14.615ms
+Scanning for USB devices : 2.416ms
+Scanning for USB devices : 1.668ms
+[Licensing::Client] Successfully resolved entitlement details
+Scanning for USB devices : 3.877ms
+Scanning for USB devices : 2.606ms
+Asset Pipeline Refresh (id=8a46eb6b74020584bba5b7a429b586d1): Total: 0.018 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+[INFO ] [relay] log Domain reload signal received from client editor-24448-nc0ygr
+[websockify wrapper] Kill
+[websockify wrapper] Process killed
+[INFO ] [relay] log Client disconnected - blocking and caching for recovery
+[WARN ] [relay] connection.lost clientId=null
+[WARN ] [relay] log Client disconnected - sessions will persist until auto-shutdown, reason: Client disconnected
+[INFO ] [relay] log Auto-shutdown timer started due to client disconnection
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 12.34 ms, found 2 plugins.
+[websockify wrapper] Start node and websockify.js
+[websockify wrapper] Proxying from :35020 to localhost:34999
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  5.937 seconds
+Domain Reload Profiling: 11055ms
+	BeginReloadAssembly (4363ms)
+		ExecutionOrderSort (3ms)
+		DisableScriptedObjects (740ms)
+		CreateAndSetChildDomain (2250ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (185ms)
+	LoadAllAssembliesAndSetupDomain (530ms)
+		LoadAssemblies (516ms)
+		TypeCache.Refresh (12ms)
+		AnalyzeDomain (10ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (5939ms)
+		SetupLoadedEditorAssemblies (0ms)
+			LogAssemblyErrors (5ms)
+			BeforeProcessingInitializeOnLoad (293ms)
+			ProcessInitializeOnLoadAttributes (1021ms)
+			ProcessInitializeOnLoadMethodAttributes (1046ms)
+		AwakeInstancesAfterBackupRestoration (2533ms)
+
+Asset Pipeline Refresh (id=f0bc1c4e5b032e74fb6e17ae3544dd3f): Total: 11.686 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=6181 ms
+		Asset DB Callback time: managed=39 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=5459 ms, compile time=4 ms, other=0 ms
+		Project Asset Count: scripts=1106, non-scripts=3398
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 3.937ms
+	ApplyChangesToAssetFolders: 0.600ms
+	Collect global state as custom dependencies: 2.373ms
+	ProcessAssetsWithTransientArtifactChanges: 0.931ms
+	CategorizeAssets: 67.814ms
+	CompileScripts: 3.817ms
+	ImportOutOfDateAssets: 5961.330ms (5956.204ms without children)
+		CollectScriptTypesHashes: 4.318ms
+		ReloadNativeAssets: 0.399ms
+		UnloadImportedAssets: 0.553ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.880ms
+		ImportSchedulerStart: 2.853ms
+	PostProcessAllAssets: 39.684ms
+		MonoPostProcessAllAssets: 39.661ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 3.014ms
+			GraphRefreshPostprocessor.OnPostprocessAllAssets 2.193ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.373ms
+			AssetChangeDetector.OnPostprocessAllAssets 1.336ms
+			SyncVS.PostprocessSyncProject 0.954ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.530ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.377ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.366ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.309ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.184ms
+			ModelAssetProcessor.OnPostprocessAllAssets 0.106ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.106ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.092ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.052ms
+	GatherAllCurrentPrimaryImportResultRevisions: 1.640ms
+	PersistCurrentRevisions: 0.223ms
+	GenerateScriptTypeHashes: 5.743ms
+	GenerateScriptTypeSerializationHashes: 9.007ms
+	Untracked: 5567.313ms
+
+ByteREC[Unity]SceneLoaded: Main has been loaded (4)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+bytedance.ttrec.ByteLog:Log (string) (at /Users/bytedance/Project/tiktok-minigame-unity-sdk/Assets/Plugins/com.tiktok.ttsdk/TTSDK/ByteREC/ByteLog.cs:10)
+bytedance.ttrec.ByteREC:SceneLoaded (UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode) (at /Users/bytedance/Project/tiktok-minigame-unity-sdk/Assets/Plugins/com.tiktok.ttsdk/TTSDK/ByteREC/ByteREC.cs:66)
+UnityEngine.SceneManagement.SceneManager:Internal_SceneLoaded (UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
+
+(Filename: /Users/bytedance/Project/tiktok-minigame-unity-sdk/Assets/Plugins/com.tiktok.ttsdk/TTSDK/ByteREC/ByteLog.cs Line: 10)
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.614 ms
+	Integration:            94.732 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   96.361 ms
+Can't add component 'RectTransform' to Score because such a component is already added to the game object!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.GameObject:Internal_AddComponentWithType (System.Type)
+UnityEngine.GameObject:AddComponent (System.Type)
+UnityEngine.GameObject:.ctor (string,System.Type[])
+ScoreDisplay:CreateScoreLabel (UnityEngine.RectTransform,string,int,string) (at Assets/Scripts/UI/ScoreDisplay.cs:578)
+ScoreDisplay:CreateScoreUI (UnityEngine.RectTransform) (at Assets/Scripts/UI/ScoreDisplay.cs:138)
+ScoreDisplay:Initialize (UnityEngine.Canvas,UnityEngine.RectTransform) (at Assets/Scripts/UI/ScoreDisplay.cs:108)
+GameManager:Start () (at Assets/Scripts/GameManager.cs:116)
+
+[Assets/Scripts/GameManager.cs line 116]
+
+Can't add component 'RectTransform' to Best because such a component is already added to the game object!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.GameObject:Internal_AddComponentWithType (System.Type)
+UnityEngine.GameObject:AddComponent (System.Type)
+UnityEngine.GameObject:.ctor (string,System.Type[])
+ScoreDisplay:CreateScoreLabel (UnityEngine.RectTransform,string,int,string) (at Assets/Scripts/UI/ScoreDisplay.cs:578)
+ScoreDisplay:CreateScoreUI (UnityEngine.RectTransform) (at Assets/Scripts/UI/ScoreDisplay.cs:139)
+ScoreDisplay:Initialize (UnityEngine.Canvas,UnityEngine.RectTransform) (at Assets/Scripts/UI/ScoreDisplay.cs:108)
+GameManager:Start () (at Assets/Scripts/GameManager.cs:116)
+
+[Assets/Scripts/GameManager.cs line 116]
+
+Can't add component 'RectTransform' to Moves because such a component is already added to the game object!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.GameObject:Internal_AddComponentWithType (System.Type)
+UnityEngine.GameObject:AddComponent (System.Type)
+UnityEngine.GameObject:.ctor (string,System.Type[])
+ScoreDisplay:CreateScoreLabel (UnityEngine.RectTransform,string,int,string) (at Assets/Scripts/UI/ScoreDisplay.cs:578)
+ScoreDisplay:CreateScoreUI (UnityEngine.RectTransform) (at Assets/Scripts/UI/ScoreDisplay.cs:140)
+ScoreDisplay:Initialize (UnityEngine.Canvas,UnityEngine.RectTransform) (at Assets/Scripts/UI/ScoreDisplay.cs:108)
+GameManager:Start () (at Assets/Scripts/GameManager.cs:116)
+
+[Assets/Scripts/GameManager.cs line 116]
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[INFO ] [relay] log Unity client connected with ID: editor-24448-48pnyn (relay 1.0.12-build.97)
+[INFO ] [relay] connection.established clientId=editor-24448-48pnyn port=9001
+[Licensing::Client] Successfully resolved entitlement details
+Asset Pipeline Refresh (id=9685da5e444671940abec59f3deaff47): Total: 0.021 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Asset Pipeline Refresh (id=753e3688e14c89f40b4f62694805b4b1): Total: 0.004 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Asset Pipeline Refresh (id=29760b950beb9804c97346590f84ac53): Total: 0.014 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b48137a23f494a3429a96ca3a8d32203): Total: 0.008 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=f810e823b734a9b49af9dca8c2d6b727): Total: 0.005 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Asset Pipeline Refresh (id=0f423fbf95b23fc44a837e460898f31e): Total: 0.005 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Scanning for USB devices : 1.634ms
+Scanning for USB devices : 1.757ms
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Scanning for USB devices : 1.539ms
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Asset Pipeline Refresh (id=794932d1eb1afe9458a950b48dc23e25): Total: 0.012 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+MonoPathRemapper: Attempts to remap: 1317588; Successful remaps: 24872
+Serialized file version minimum: 23, current 23
+[LAYOUT] About to save layout E:\2048\2048_TikTok_Unity\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/ywx1551497/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+[websockify wrapper] Kill
+[websockify wrapper] Process killed
+[INFO ] [relay] log Shutdown request received from client editor-24448-48pnyn
+[INFO ] [relay] log Unity client requested immediate shutdown - shutting down now, reason: Shutdown requested by client
+[INFO ] [relay] log Shutdown: Initiating graceful shutdown: Shutdown requested by client
+成功: 已终止 PID 40956 (属于 PID 27960 子进程)的进程。
+成功: 已终止 PID 27960 (属于 PID 24448 子进程)的进程。
+Importing 'GUID: 2e498d1c8094910479dc3e1b768306a4 - Path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 2e498d1c8094910479dc3e1b768306a4' -> (Import Result ID: '632ff03ccef77c9d91eec1e76bcf57f7') in 0.033 seconds [static dependencies only]. Details - ImportResultOutputID=15c8c079d336d28f621b2cb41a27d1c5 DependenciesID=9e1712e1a89c24953b2e2522391c8636 StaticDependenciesID=f4b9ea77a87a231e44986e0077d3f57a 
+Refreshing native plugins compatible for Editor in 12.12 ms, found 2 plugins.
+
+Asset Pipeline Refresh (id=e554deb45ffde7340a459de1064a1849): Total: 1.404 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=6 ms, native=104 ms
+		Asset DB Callback time: managed=1261 ms, native=31 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1106, non-scripts=3398
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	ApplyChangesToAssetFolders: 0.086ms
+	Scan: 33.476ms
+	Collect global state as custom dependencies: 0.615ms
+	ProcessAssetsWithTransientArtifactChanges: 1.444ms
+	CategorizeAssets: 7.639ms
+	ImportOutOfDateAssets: 54.359ms (0.780ms without children)
+		ImportManagerImport: 48.300ms (9.312ms without children)
+			UpdateCategorizedAssets: 0.060ms
+		ReloadNativeAssets: 0.069ms
+		UnloadImportedAssets: 0.639ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.207ms
+		ImportSchedulerStart: 3.341ms
+	PostProcessAllAssets: 1270.688ms
+		XRBuildSystem.XRAssetImported 1.402ms
+		VCAutoAddAssetPostprocess 0.336ms
+		ShaderAssetModifiedCallback 0.252ms
+		PostprocessAssetsUpdateCachedIcon 0.063ms
+		MonoPostProcessAllAssets: 1261.108ms
+			AssetReferenceReimportMonitor.OnPostprocessAllAssets 129.377ms
+			AssetPostprocessor.OnPostprocessAllAssets 58.665ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 26.398ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 19.895ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 18.691ms
+			AssetChangedListener.OnPostprocessAllAssets 10.253ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 7.699ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 7.310ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 4.339ms
+			ModelAssetProcessor.OnPostprocessAllAssets 2.594ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 2.400ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 2.200ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 2.121ms
+			SkillsProjectAssetPostprocessor.OnPostprocessAllAssets 1.505ms
+			AssetEvents.OnPostprocessAllAssets 1.226ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 1.173ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.827ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.544ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.512ms
+			TrackSelectedAssetsProcessor.OnPostprocessAllAssets 0.511ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.342ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.206ms
+			GraphRefreshPostprocessor.OnPostprocessAllAssets 0.195ms
+			SyncVS.PostprocessSyncProject 0.059ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.054ms
+	PostAssetChangesProfiler: 22.472ms
+	GatherAllCurrentPrimaryImportResultRevisions: 1.018ms
+	PersistCurrentRevisions: 0.534ms
+	UnloadStreamsEnd: 0.134ms
+	Untracked: 11.723ms
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-yWX1551497-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-yWX1551497 channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+[websockify wrapper] Kill
+abort_threads: Failed aborting id: 0000000000000858, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000000858, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 3480
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1793422599765,"processId":24448,"allocatedMemory":37909162,"memoryLabels":[{"Default":370310},{"Permanent":15516},{"NewDelete":97485},{"Thread":3842600},{"Manager":34461},{"VertexData":8},{"Geometry":824},{"Texture":24},{"Shader":992277},{"Material":132},{"GfxDevice":55968},{"Animation":952},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":59968},{"Input":42840},{"JobScheduler":256},{"TextLib":56814},{"Mono":48},{"MonoCode":704},{"ScriptingNativeRuntime":2498976},{"BaseObject":462064},{"Resource":1444},{"Renderer":2504},{"Transform":4781},{"File":7381},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":6341135},{"StaticString":3808},{"Utility":2673911},{"Curl":48},{"PoolAlloc":2792},{"AI":80},{"TypeTree":13863948},{"ScriptManager":626472},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":21552},{"WebRequest":4580},{"VR":49650},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":729},{"Secure":265},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":768},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"EntityIdStore":33088},{"Gui":449},{"EditorUtility":454977},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4887967},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":36921},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":270},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3606},{"Windowing":456},{"Licensing":12810},{"AssetReference":32},{"IPCStream":32}]}

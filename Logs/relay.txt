@@ -1223,3 +1223,18 @@
 [2026-10-31T00:33:09.424Z] [DEBUG] log Relay->Editor communication is unblocked
 [2026-10-31T00:33:09.425Z] [INFO] log Unity client connected with ID: editor-24448-nc0ygr (relay 1.0.12-build.97)
 [2026-10-31T00:33:09.427Z] [INFO] connection.established clientId=editor-24448-nc0ygr port=9001
+[2026-10-31T03:53:03.403Z] [INFO] log Domain reload signal received from client editor-24448-nc0ygr
+[2026-10-31T03:53:03.405Z] [DEBUG] log Relay->Editor communication is blocked
+[2026-10-31T03:53:03.406Z] [DEBUG] acp.queue.pause depth=0
+[2026-10-31T03:53:05.258Z] [DEBUG] log Relay->Editor communication is blocked
+[2026-10-31T03:53:05.259Z] [DEBUG] acp.queue.pause depth=0
+[2026-10-31T03:53:05.259Z] [INFO] log Client disconnected - blocking and caching for recovery
+[2026-10-31T03:53:05.259Z] [WARN] connection.lost clientId=null
+[2026-10-31T03:53:05.260Z] [WARN] log Client disconnected - sessions will persist until auto-shutdown, reason: Client disconnected
+[2026-10-31T03:53:05.260Z] [INFO] log Auto-shutdown timer started due to client disconnection
+[2026-10-31T03:53:16.548Z] [DEBUG] log Relay->Editor communication is unblocked
+[2026-10-31T03:53:16.549Z] [INFO] log Unity client connected with ID: editor-24448-48pnyn (relay 1.0.12-build.97)
+[2026-10-31T03:53:16.549Z] [INFO] connection.established clientId=editor-24448-48pnyn port=9001
+[2026-10-31T04:56:31.286Z] [INFO] log Shutdown request received from client editor-24448-48pnyn
+[2026-10-31T04:56:31.291Z] [INFO] log Unity client requested immediate shutdown - shutting down now, reason: Shutdown requested by client
+[2026-10-31T04:56:31.305Z] [INFO] log Shutdown: Initiating graceful shutdown: Shutdown requested by client

@@ -6019,3 +6019,73 @@ Total: 69.771500 ms (FindLiveObjects: 1.255100 ms CreateObjectMapping: 0.649800 
 Prepare: number of updated asset objects reloaded= 0
 EnvironmentDependencyValues requested are different than current active one (requested -> active):
   graphicsApiMask: 2048 -> 264192
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 18.77 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 13.64 ms, found 2 plugins.
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  3.330 seconds
+Domain Reload Profiling: 14479ms
+	BeginReloadAssembly (8237ms)
+		ExecutionOrderSort (3ms)
+		DisableScriptedObjects (371ms)
+		CreateAndSetChildDomain (4472ms)
+	RebuildCommonClasses (85ms)
+	RebuildNativeTypeToScriptingClass (338ms)
+	initialDomainReloadingComplete (625ms)
+	LoadAllAssembliesAndSetupDomain (1861ms)
+		LoadAssemblies (3150ms)
+		TypeCache.Refresh (21ms)
+		AnalyzeDomain (15ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (3333ms)
+		SetupLoadedEditorAssemblies (0ms)
+			LogAssemblyErrors (6ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (334ms)
+			ProcessInitializeOnLoadAttributes (937ms)
+			ProcessInitializeOnLoadMethodAttributes (1415ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (5ms)
+		AwakeInstancesAfterBackupRestoration (49ms)
+Refreshing native plugins compatible for Editor in 12.32 ms, found 2 plugins.
+Unloading 43 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4841 unused Assets / (16.0 MB). Loaded Objects now: 5766.
+Memory consumption went from 0.82 GB to 0.80 GB.
+Total: 54.172400 ms (FindLiveObjects: 2.288400 ms CreateObjectMapping: 0.670900 ms MarkObjects: 40.842900 ms  DeleteObjects: 9.850800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+EnvironmentDependencyValues requested are different than current active one (requested -> active):
+  graphicsApiMask: 2048 -> 264192
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Refreshing native plugins compatible for Editor in 40.37 ms, found 2 plugins.
+Unloading 43 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (11.5 MB). Loaded Objects now: 5766.
+Memory consumption went from 0.81 GB to 0.80 GB.
+Total: 300.934000 ms (FindLiveObjects: 6.268500 ms CreateObjectMapping: 5.304800 ms MarkObjects: 284.163900 ms  DeleteObjects: 4.337900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+EnvironmentDependencyValues requested are different than current active one (requested -> active):
+  graphicsApiMask: 2048 -> 264192
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+Curl error 42: Callback aborted
+AssetImportWorker is now disconnected from the server
+Process exiting
+[ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 0
