@@ -129,7 +129,12 @@ public static class TikTokBridge
         ad.OnLoad += () => ad.Show();
         ad.OnError += (code, msg) =>
         {
-            Debug.LogError($"[TikTokBridge] Rewarded ad error. Code: {code}, Msg: {msg}");
+            // 编辑器 Mock 模拟环境没有真实广告库存，用真广告位 ID 加载失败属预期行为（不断言配置错误），仅打普通日志；
+            // 真机环境广告加载失败才是真实错误，保留红色提示
+            if (Application.isEditor)
+                Debug.Log($"[TikTokBridge] Rewarded ad (editor mock) unavailable. Code: {code}, Msg: {msg}");
+            else
+                Debug.LogError($"[TikTokBridge] Rewarded ad error. Code: {code}, Msg: {msg}");
             once(false);
         };
         ad.OnClose += isEnded =>

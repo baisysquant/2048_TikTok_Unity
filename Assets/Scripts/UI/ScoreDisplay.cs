@@ -41,6 +41,8 @@ public class ScoreDisplay : MonoBehaviour
     private TMPro.TextMeshProUGUI _undoSubText;
     private Image _undoImage;
     private Image _poolImage;
+    private TMPro.TextMeshProUGUI _poolText;   // BOOST 按钮文字（常显，便于识别入口）
+    private bool _poolActive;                  // 特技池是否有库存（驱动颜色呼吸，不缩放）
     private RectTransform _poolRect;
     private CanvasGroup _poolGlow;
 
@@ -91,6 +93,7 @@ public class ScoreDisplay : MonoBehaviour
     private static readonly Color TitleTextColor = new Color(0.52f, 0.43f, 0.33f);           // 深糖棕
     private static readonly Color BtnBrown = new Color(0.68f, 0.52f, 0.38f);                 // 焦糖棕（糖果风）
     private static readonly Color BtnOrange = new Color(0.98f, 0.72f, 0.42f);                // 蜜橘橙（糖果风）
+    private static readonly Color BtnOrangeBright = new Color(1.00f, 0.86f, 0.58f);           // 亮蜜橘橙（呼吸上限，不改变尺寸）
     private static readonly Color BtnGray = new Color(0.90f, 0.86f, 0.81f);                  // 奶灰（禁用）
     private static readonly Color ScoreBoxBrown = new Color(0.80f, 0.68f, 0.54f);             // 浅焦糖（SCORE 框底色）
 
@@ -481,27 +484,29 @@ public class ScoreDisplay : MonoBehaviour
         poolTMP.alignment = TMPro.TextAlignmentOptions.Center;
         poolTMP.color = new Color(0.45f, 0.38f, 0.30f);   // 深棕（奶灰底）
         poolTMP.raycastTarget = false;
+        _poolText = poolTMP;
     }
 
-    /// <summary>刷新特技池入口条：库存 > 0 时金色 + 呼吸发光，否则置灰</summary>
+    /// <summary>刷新特技池入口条：库存 > 0 时金色 + 颜色呼吸发光（不缩放尺寸，避免挤压相邻 UNDO 按钮），否则置灰；BOOST 文字常显便于识别</summary>
     public void UpdateSpecialPoolBar(int count, bool specialButtonPlaced = false)
     {
         if (_poolImage == null) return;
         bool active = count > 0;
+        _poolActive = active;
         _poolImage.color = active ? BtnOrange : BtnGray;
-        var glow = _poolGlow;
-        if (active)
-        {
-            // 呼吸光效：1.0 ~ 1.12 缩放
-            float pulse = 1f + 0.12f * (0.5f + 0.5f * Mathf.Sin(Time.unscaledTime * 4f));
-            _poolRect.localScale = new Vector3(pulse, pulse, 1);
-        }
-        else
-        {
-            _poolRect.localScale = Vector3.one;
-        }
-        glow.alpha = 1;
+        _poolRect.localScale = Vector3.one;   // 呼吸改用颜色脉动（Update 内），不再改变尺寸
+        if (_poolText != null)
+            _poolText.enabled = true;   // 首界面 BOOST 按钮文字常显（有库存也只隐藏尺寸缩放，保留文字）
+        _poolGlow.alpha = 1;
         _ = specialButtonPlaced;
+    }
+
+    /// <summary>每帧驱动特技池条呼吸：有库存时橙色↔亮橙色脉动（纯颜色变化，不改变尺寸，避免与 UNDO 按钮挤压）</summary>
+    private void Update()
+    {
+        if (!_poolActive || _poolImage == null) return;
+        float pulse = 0.5f + 0.5f * Mathf.Sin(Time.unscaledTime * 4f);
+        _poolImage.color = Color.Lerp(BtnOrange, BtnOrangeBright, pulse);
     }
 
     /// <summary>刷新后悔按钮：可回撤时高亮，置灰时副标题变化</summary>
@@ -1036,12 +1041,14 @@ public class ScoreDisplay : MonoBehaviour
         return row;
     }
 
-    /// <summary>按行数动态布局白卡弹窗：标题/分隔线/计数/列表/提示/关闭全部随高度联动（同 GameOver 卡片结构）</summary>
+    /// <summary>按行数动态布局白卡弹窗：标题/分隔线/计数/列表/提示/关闭全部随高度联动（同 GameOver 卡片结构）。
+    /// 高度骨架（自上而下）：标题62 + 分隔线50 + 计数42 + 计数半高20 + 间隙18 = 列表区固定起点192；
+    /// 面板高 = 192 + 列表高 + 免费提示(34) + 底部余量(40) + 安全余量(34)，保证最后一行与免费提示恒有 ~50px 间隙、不互相遮挡。</summary>
     private void LayoutSpecialPanel(int rows)
     {
         const float rowH = 60f, gap = 10f;
         float listH = rows > 0 ? rows * rowH + (rows - 1) * gap : 96f;
-        float panelH = 150f + listH + 46f;
+        float panelH = 300f + listH;
 
         _specialCardRT.sizeDelta = new Vector2(_specialCardW, panelH);
         _specialShadowRT.sizeDelta = new Vector2(_specialCardW + 18, panelH + 18);
@@ -1050,8 +1057,8 @@ public class ScoreDisplay : MonoBehaviour
         _specialDividerRT.anchoredPosition = new Vector2(0, panelH / 2f - 112);
         _specialCountRT.anchoredPosition = new Vector2(0, panelH / 2f - 154);
         _specialListRoot.sizeDelta = new Vector2(400, listH);
-        _specialListRoot.anchoredPosition = new Vector2(0, panelH / 2f - 154 - listH / 2f);
-        _specialFreeHintRT.anchoredPosition = new Vector2(0, -(panelH / 2f - 40));
+        _specialListRoot.anchoredPosition = new Vector2(0, panelH / 2f - 192f - listH / 2f);   // 列表区起点固定距卡顶 192，向下排布
+        _specialFreeHintRT.anchoredPosition = new Vector2(0, -(panelH / 2f - 40f));           // 免费提示固定靠卡片底部
         _specialCloseRT.anchoredPosition = new Vector2(_specialCardW / 2f - 48, panelH / 2f - 48);   // 同创建：整个圆形在圆角内侧
     }
 
